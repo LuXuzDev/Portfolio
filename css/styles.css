@@ -256,3 +256,93 @@ header ul li a:hover{
 .user-profile-btns a:first-child{
     border-right: 1px solid var(--border-color);
 }
+
+.section-container{
+    background: linear-gradient(120deg,var(--gradient-start),var(--gradient-end))!important;
+    padding: 45px 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.all-content{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* About Me */
+#about-me{
+    border-radius: 0px 30px 30px 0px;
+    min-height: 300px;
+    padding: 85px 50px;
+}
+
+#about-me h3{
+    color : var(--text-color);
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+#about-me h3 span{
+    color: var(--mair-color);
+}
+
+#about-me #role{
+    opacity: 1;
+    white-space: nowrap;
+    transition: opacity 0.5s ease-out;
+    border-right: 2px solid var(--main-color);
+    display: inline-block;
+    padding-right: 5px;
+}
+
+#about-me h1{
+    color: var(--text-color);
+    font-size: 3rem;
+    font-weight: 500;
+    margin: 10px 0;
+    max-width: 700px;
+}
+
+#about-me h1 span{
+    background-color: var(--mair-color);
+    color: var(--bg-color);
+    padding: 0px 20px;
+    border-radius: 30px;
+    font-size: 2.6rem;
+}
+
+#about-me p{
+    color: var(--text-color);
+    font-size: 1.1rem;
+    max-width: 750px;
+    margin-top: 10px;
+}
+
+.project-container-about{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+    margin-top: 30px;
+}
+
+.profile-container-box{
+    display: flex;
+    align-items: center;
+    grid-gap: 20px;
+}
+
+.profile-container-box span{
+    color: var(--text-color);
+    font-size: 3.4rem;
+    font-weight: 400;
+}
+
+.profile-container-box strong{
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 400;
+    max-width: 100px;
+}

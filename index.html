@@ -122,13 +122,77 @@
                         </div>
                 </div>
             </div>
-
         </div>
 
 
-        <div class = "all-content"></div>
+        <div class = "all-content">
+            <div class="all-content">
+                <!--About-me-->
+                <section id="about-me" class="section-container">
+                    <h3>Hello, I'm <span id="role">Software Engineer</span></h3>
+                    <h1><span>Backend Developer</span> </h1>
+                    <p>
+                    I'm a Junior Backend Developer based in Havana, Cuba. I've worked on scalable projects and enjoy designing efficient, robust solutions to real-world problems. 
+                    I'm a quick learner, deeply passionate about programming, and always eager to grow my skills and take on new challenges.
+                    </p>
+                    <!--Boxes-->
+                    <div class="project-container-about">
+                        <div class="profile-container-box">
+                            <span>6</span>
+                            <strong>Completed Projects</strong>
+                        </div>
+                        <div class="profile-container-box">
+                            <span>2</span>
+                            <strong>Years of Experience</strong>
+                        </div>
+                        <div class="profile-container-box">
+                            <span>10+</span>
+                            <strong>Technologies Learned</strong>
+                        </div>
+                    </div>
+                </section>
 
-
+                
+            </div>
+        </div>
     </div>
+
+
+    <script>
+        //Work Transition Effect
+        document.addEventListener("DOMContentLoaded",()=>{
+            const roles = ["Software Engineer", "Web Developer", "Backend Developer"];
+            const roleElement = document.getElementById("role");
+            let roleIndex = 0;
+            let letterIndex = 0;
+            let typingInterval;
+
+            function typeRole() {
+                roleElement.style.opacity = 0;
+                setTimeout(() => {
+                    roleElement.textContent ="";
+                    letterIndex = 0;
+
+                    typingInterval = setInterval(() => {
+                        if (letterIndex < roles[roleIndex].length) {
+                            roleElement.textContent += roles[roleIndex][letterIndex];
+                            letterIndex++;
+                            roleElement.style.opacity = 1;
+                        } else {
+                            clearInterval(typingInterval);
+                            setTimeout(() => {
+                               roleIndex = (roleIndex + 1) % roles.length;
+                               typeRole();
+                            }, 1000);
+                        }
+                    }, 150);
+                    roleElement.style.opacity = 1;
+                }, 500);
+            }
+
+            //start typing effect
+            typeRole();
+        });
+    </script>
 </body>
 </html>
