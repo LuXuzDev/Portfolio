@@ -462,6 +462,56 @@ header ul li a:hover{
     object-fit: contain;
 }
 
+/* Skills Tabs */
+.skills-tabs{
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.tab-btn{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 30px;
+    background: transparent;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.tab-btn .skill-icon{
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.tab-btn:hover{
+    color: var(--mair-color);
+}
+
+.tab-btn.active{
+    border-color: var(--mair-color);
+    color: var(--mair-color);
+}
+
+.tab-content{
+    margin-top: 30px;
+}
+
+.tab-pane{
+    display: none;
+}
+
+.tab-pane.active{
+    display: block;
+}
+
 /*Services*/
 .service-container{
     display: grid;
@@ -529,4 +579,8 @@ header ul li a:hover{
     text-decoration: underline;
     font-size: 0.8rem;
     font-weight: 500;
+}
+
+.service-box a:hover{
+    color: var(--mair-color);
 }
