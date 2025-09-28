@@ -584,3 +584,165 @@ header ul li a:hover{
 .service-box a:hover{
     color: var(--mair-color);
 }
+
+/*Projects*/
+.project-list{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    grid-gap: 20px;
+    flex-wrap: wrap;
+    margin: 50px 0px 0px 0px;
+}
+
+.project-list li{
+    color: var(--text-color);
+    padding: 8px 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.project-list li:hover{
+    border-color: var(--mair-color);
+    color: var(--mair-color);
+}
+
+.project-list li.active{
+    border-color: var(--mair-color);
+    color: var(--mair-color);
+}
+
+.project-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.project-card{
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover{
+    border-color: var(--mair-color);
+    transform: translateY(-2px);
+}
+
+.project-title{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.project-title h4{
+    color: var(--text-color);
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.project-title .project-icon{
+    font-size: 1.2rem;
+}
+
+.project-description{
+    color: var(--text-color);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.project-tech{
+    margin-bottom: 20px;
+}
+
+.project-tech strong{
+    color: var(--mair-color);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.project-tech span{
+    color: var(--text-color);
+    font-size: 0.9rem;
+    margin-left: 5px;
+}
+
+.project-contributions{
+    margin-bottom: 25px;
+}
+
+.project-contributions strong{
+    color: var(--mair-color);
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.project-contributions ul{
+    list-style: none;
+    padding: 0;
+}
+
+.project-contributions li{
+    color: var(--text-color);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.project-contributions li::before{
+    content: "•";
+    color: var(--mair-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.project-link{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--mair-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.project-link:hover{
+    opacity: 0.8;
+    transform: translateX(5px);
+}
+
+.project-link i{
+    font-size: 1rem;
+}
+
+.project-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    margin-top: 30px;
+}
+
+.project-box{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color)
+}
