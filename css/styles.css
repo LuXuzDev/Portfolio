@@ -13,10 +13,9 @@ ul{
     list-style: none;
 }
 
-/* Root Colors*/
+/* Root Colors - Dark Mode */
 :root{
     --mair-color : #78CC6D;
-    --secondary-color : #5F85DB;
     --text-color: #F6F4F0;
     --bg-color: #222222;
     --border-color:#303030;
@@ -24,6 +23,18 @@ ul{
     --gradient-end: #0c0c0c;
     --bg-gradient-start: #2d2f31;
     --bg-gradient-end: #272a2e;
+}
+
+/* Light Mode Colors */
+[data-theme="light"] {
+    --mair-color : #4CAF50;
+    --text-color: #333333;
+    --bg-color: #ffffff;
+    --border-color: #e0e0e0;
+    --gradient-start: #ffffff;
+    --gradient-end: #ffffff;
+    --bg-gradient-start: #bebebe;
+    --bg-gradient-end: #f8f9fa;
 }
 
 body{
@@ -45,6 +56,7 @@ body{
     grid-template-columns: 425px 1fr;
     grid-gap: 10px;
     align-items: start;
+    min-height: 100vh;
 }
 
 .menu-profile
@@ -52,6 +64,9 @@ body{
     display : grid;
     grid-template-columns: 65px 1fr;
     grid-gap: 10px;
+    position: sticky;
+    top: 20px;
+    height: fit-content;
 }
 
 header{
@@ -279,7 +294,8 @@ header ul li a:hover{
     flex-direction: column;
     grid-gap: 20px;
     width: 100%;
-    overflow: hidden;
+    overflow: visible;
+    padding-bottom: 50px;
 }
 
 /* About Me */
@@ -1023,7 +1039,6 @@ header ul li a:hover{
 
 .contact-item:hover .contact-icon {
     transform: rotate(10deg) scale(1.1);
-    background: var(--mair-color);
 }
 
 .contact-details h4 {

@@ -781,7 +781,7 @@
                         <div class="contact-info">
                             <div class="contact-item bg-gradient">
                                 <div class="contact-icon">
-                                    <i class="fa-solid fa-envelope"></i>
+                                    <img src="images/mail.png" alt="Email" class="skill-icon">
                                 </div>
                                 <div class="contact-details">
                                     <h4>Email</h4>
@@ -791,7 +791,7 @@
 
                             <div class="contact-item bg-gradient">
                                 <div class="contact-icon">
-                                    <i class="fa-solid fa-phone"></i>
+                                    <img src="images/phone.png" alt="Phone" class="skill-icon">
                                 </div>
                                 <div class="contact-details">
                                     <h4>Phone</h4>
@@ -801,7 +801,7 @@
 
                             <div class="contact-item bg-gradient">
                                 <div class="contact-icon">
-                                    <i class="fa-solid fa-location-dot"></i>
+                                    <img src="images/location.png" alt="Location" class="skill-icon">
                                 </div>
                                 <div class="contact-details">
                                     <h4>Location</h4>
@@ -811,7 +811,7 @@
 
                             <div class="contact-item bg-gradient">
                                 <div class="contact-icon">
-                                    <i class="fa-brands fa-linkedin"></i>
+                                    <img src="images/linkedin.png" alt="LinkedIn" class="skill-icon">
                                 </div>
                                 <div class="contact-details">
                                     <h4>LinkedIn</h4>
@@ -999,6 +999,36 @@
                     }, 2000);
                 });
             }
+
+            // Dark/Light Mode Toggle
+            const darkLightBtn = document.querySelector('.dark-light-btn');
+            const body = document.body;
+            
+            // Check for saved theme or default to dark
+            const currentTheme = localStorage.getItem('theme') || 'dark';
+            if (currentTheme === 'light') {
+                body.setAttribute('data-theme', 'light');
+                darkLightBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+            } else {
+                body.removeAttribute('data-theme');
+                darkLightBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+            }
+
+            darkLightBtn.addEventListener('click', () => {
+                const currentTheme = body.getAttribute('data-theme');
+                
+                if (currentTheme === 'light') {
+                    // Switch to dark mode
+                    body.removeAttribute('data-theme');
+                    darkLightBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    // Switch to light mode
+                    body.setAttribute('data-theme', 'light');
+                    darkLightBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+                    localStorage.setItem('theme', 'light');
+                }
+            });
         });
     </script>
 </body>
