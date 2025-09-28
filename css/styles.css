@@ -1084,6 +1084,21 @@ header ul li a:hover{
     color: #666666;
 }
 
+/* Rotating clock animation for future certificate */
+@keyframes rotateClock {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.future-certificate .certificate-icon img {
+    animation: rotateClock 3s linear infinite;
+    transform-origin: center;
+}
+
 .project-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
