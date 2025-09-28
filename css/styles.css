@@ -632,22 +632,46 @@ header ul li a:hover{
     color: var(--mair-color);
 }
 
-.project-container{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 30px;
+/* Project Carousel */
+.project-carousel {
+    position: relative;
     margin-top: 40px;
     width: 100%;
 }
 
-.project-card{
+.project-carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.project-slide {
+    display: none;
     border: 1px solid var(--border-color);
     border-radius: 15px;
     padding: 30px;
+    width: 100%;
     transition: all 0.3s ease;
+    animation: fadeInSlide 0.5s ease-in-out;
 }
 
-.project-card:hover{
+.project-slide.active {
+    display: block;
+}
+
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.project-slide:hover {
     border-color: var(--mair-color);
     transform: translateY(-2px);
 }
@@ -761,6 +785,35 @@ header ul li a:hover{
 
 .project-link i{
     font-size: 1rem;
+}
+
+/* Project Dots */
+.project-dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--border-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.dot.active {
+    background: var(--mair-color);
+    transform: scale(1.2);
+    border-color: var(--mair-color);
+}
+
+.dot:hover {
+    background: var(--mair-color);
+    opacity: 0.7;
 }
 
 /* Resume/Education & Work */
@@ -931,6 +984,15 @@ header ul li a:hover{
 .certificate-icon{
     font-size: 2.5rem;
     margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.certificate-icon img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
 }
 
 .certificate-title{
@@ -977,6 +1039,49 @@ header ul li a:hover{
 
 .certificate-download i {
     font-size: 0.9rem;
+}
+
+/* Future Certificate Styles */
+.future-certificate {
+    opacity: 0.7;
+    border: 2px dashed var(--mair-color);
+    position: relative;
+}
+
+.future-certificate::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--border-color);
+    opacity: 0.05;
+    border-radius: inherit;
+    pointer-events: none;
+}
+
+.future-download {
+    background: var(--border-color) !important;
+    color: var(--text-color);
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.future-download:hover {
+    background: var(--border-color) !important;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Light mode specific styles for future certificate */
+[data-theme="light"] .future-certificate {
+    border-color: var(--mair-color);
+}
+
+[data-theme="light"] .future-download {
+    background: #f5f5f5 !important;
+    color: #666666;
 }
 
 .project-container{
@@ -1215,8 +1320,8 @@ header ul li a:hover{
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
     
-    .project-container {
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    .project-slide {
+        padding: 25px 20px;
     }
     
     .contact-content {
@@ -1388,9 +1493,18 @@ header ul li a:hover{
         gap: 20px;
     }
     
-    .project-container {
-        grid-template-columns: 1fr;
-        gap: 20px;
+    .project-slide {
+        padding: 20px 15px;
+    }
+    
+    .project-dots {
+        gap: 8px;
+        margin-top: 25px;
+    }
+    
+    .dot {
+        width: 10px;
+        height: 10px;
     }
     
     .resume-tabs {
@@ -1546,23 +1660,22 @@ header ul li a:hover{
         font-size: 1.1rem;
     }
     
-    .project-list {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-    
-    .project-list li {
-        padding: 8px 15px;
-        font-size: 0.85rem;
-    }
-    
-    .project-card {
-        padding: 20px 15px;
+    .project-slide {
+        padding: 15px 10px;
     }
     
     .project-title h4 {
         font-size: 1.1rem;
+    }
+    
+    .project-dots {
+        gap: 6px;
+        margin-top: 20px;
+    }
+    
+    .dot {
+        width: 8px;
+        height: 8px;
     }
     
     .resume-tabs {
