@@ -177,7 +177,7 @@ header ul li a:hover{
    display: flex;
    align-items: center;
    flex-direction: column;
-   border-radius: 30px 0px 30px 30px;
+   border-radius: 30px 30px 30px 30px;
 }
 
 .user-profile-container{
@@ -1132,4 +1132,509 @@ header ul li a:hover{
 
 .submit-btn:active {
     transform: translateY(-1px);
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Tablet and Small Desktop - 1200px and below */
+@media (max-width: 1200px) {
+    .main-container {
+        grid-template-columns: 380px 1fr;
+        width: 95%;
+        margin: 30px auto;
+    }
+    
+    .menu-profile {
+        grid-template-columns: 60px 1fr;
+    }
+    
+    header ul li a {
+        width: 45px;
+        height: 45px;
+        font-size: 0.95rem;
+    }
+    
+    .user-profile {
+        padding: 25px 20px;
+    }
+    
+    .section-container {
+        padding: 35px 40px;
+    }
+    
+    #about-me {
+        padding: 65px 40px;
+    }
+}
+
+/* Tablet - 992px and below */
+@media (max-width: 992px) {
+    .main-container {
+        grid-template-columns: 320px 1fr;
+        grid-gap: 15px;
+    }
+    
+    .menu-profile {
+        grid-template-columns: 55px 1fr;
+        grid-gap: 8px;
+    }
+    
+    header ul {
+        padding: 8px 4px;
+    }
+    
+    header ul li a {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+    
+
+    
+    .user-profile-text h1 {
+        font-size: 1.8rem;
+    }
+    
+    .section-container {
+        padding: 30px 35px;
+    }
+    
+    #about-me {
+        padding: 55px 35px;
+    }
+    
+    #about-me h1 {
+        font-size: 2.2rem;
+    }
+    
+    .skill-box-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    
+    .service-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    
+    .project-container {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+}
+
+/* Mobile Landscape and Small Tablets - 768px and below */
+@media (max-width: 768px) {
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        margin: 20px auto;
+        gap: 20px;
+    }
+    
+    .menu-profile {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        position: relative;
+        top: auto;
+    }
+    
+    header {
+        order: 1;
+        width: 100%;
+    }
+    
+    .profile-container {
+        order: 2;
+        width: 100%;
+    }
+    
+    .all-content {
+        order: 3;
+        width: 100%;
+    }
+    
+    header nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        background: linear-gradient(120deg,var(--gradient-start),var(--gradient-end))!important;
+        padding: 15px 20px;
+        border-radius: 25px;
+    }
+    
+    header ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0;
+        gap: 15px;
+        border-radius: 0;
+        background: none !important;
+    }
+    
+    header ul li a {
+        width: 50px;
+        height: 50px;
+        font-size: 1rem;
+    }
+    
+    .dark-light-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1rem;
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+    
+    .user-profile {
+        padding: 30px 25px;
+    }
+    
+    .user-profile-container {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        gap: 20px;
+    }
+    
+    .user-profile-text h1 {
+        font-size: 1.6rem;
+        margin: 8px 0;
+    }
+    
+    .user-profile-text span {
+        font-size: 0.9rem;
+    }
+    
+    .profile-social-container {
+        margin-top: 10px;
+    }
+    
+    .user-profile-btns {
+        flex-direction: row;
+        gap: 15px;
+    }
+    
+    .user-profile-btns a {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .section-container {
+        padding: 25px 20px;
+    }
+    
+    #about-me {
+        padding: 40px 20px;
+    }
+    
+    #about-me h1 {
+        font-size: 1.8rem;
+        line-height: 1.3;
+    }
+    
+    #about-me h3 {
+        font-size: 1.2rem;
+    }
+    
+    .project-container-about {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 15px;
+    }
+    
+    .profile-container-box {
+        padding: 20px 15px;
+    }
+    
+    .profile-container-box span {
+        font-size: 1.8rem;
+    }
+    
+    .skills-tabs {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .tab-btn {
+        padding: 12px 8px;
+        font-size: 0.85rem;
+    }
+    
+    .skill-box-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .service-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .project-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .resume-tabs {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .resume-tab-btn {
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .contact-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .contact-info {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .contact-item {
+        padding: 20px 15px;
+    }
+}
+
+/* Mobile Portrait - 576px and below */
+@media (max-width: 576px) {
+    .main-container {
+        width: 100%;
+        margin: 10px auto;
+        padding: 0 10px;
+    }
+    
+    header nav {
+        padding: 12px 15px;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    
+    header ul {
+        gap: 10px;
+        padding: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    header ul li a {
+        width: 45px;
+        height: 45px;
+        font-size: 0.9rem;
+    }
+    
+    .dark-light-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 0.9rem;
+    }
+    
+    .user-profile {
+        padding: 20px 15px;
+    }
+    
+    .user-profile-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .user-profile-text h1 {
+        font-size: 1.4rem;
+    }
+    
+    .user-profile-btns {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .user-profile-btns a {
+        padding: 10px 15px;
+        font-size: 0.85rem;
+    }
+    
+    .section-container {
+        padding: 20px 15px;
+        border-radius: 15px;
+    }
+    
+    #about-me {
+        padding: 30px 15px;
+    }
+    
+    #about-me h1 {
+        font-size: 1.5rem;
+    }
+    
+    #about-me h3 {
+        font-size: 1.1rem;
+    }
+    
+    .project-container-about {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .profile-container-box {
+        padding: 15px 10px;
+    }
+    
+    .section-heading h3 {
+        font-size: 1.3rem;
+    }
+    
+    .skills-tabs {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    
+    .tab-btn {
+        padding: 10px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .skill-box {
+        padding: 20px 15px;
+    }
+    
+    .service-box {
+        padding: 25px 15px;
+    }
+    
+    .service-box-heading-text strong {
+        font-size: 1.1rem;
+    }
+    
+    .project-list {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .project-list li {
+        padding: 8px 15px;
+        font-size: 0.85rem;
+    }
+    
+    .project-card {
+        padding: 20px 15px;
+    }
+    
+    .project-title h4 {
+        font-size: 1.1rem;
+    }
+    
+    .resume-tabs {
+        gap: 8px;
+    }
+    
+    .resume-tab-btn {
+        padding: 10px 12px;
+        font-size: 0.85rem;
+    }
+    
+    .timeline-item {
+        padding: 20px 15px;
+    }
+    
+    .timeline-title {
+        font-size: 1.2rem;
+    }
+    
+    .certificate-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-info {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .contact-item {
+        padding: 15px 12px;
+    }
+    
+    .contact-form-container {
+        padding: 25px 15px;
+    }
+    
+    .form-group label {
+        font-size: 0.9rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .submit-btn {
+        padding: 15px;
+        font-size: 1rem;
+    }
+}
+
+/* Extra Small Mobile - 425px and below */
+@media (max-width: 425px) {
+    .main-container {
+        margin: 5px auto;
+        padding: 0 5px;
+    }
+    
+    header nav {
+        padding: 10px 5px;
+        gap: 8px;
+    }
+    
+    header ul {
+        padding: 0;
+        gap: 8px;
+    }
+    
+    header ul li a {
+        width: 40px;
+        height: 40px;
+        font-size: 0.85rem;
+    }
+    
+    .dark-light-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 0.85rem;
+    }
+    
+    .user-profile {
+        padding: 15px 10px;
+    }
+    
+    .user-profile-text h1 {
+        font-size: 1.2rem;
+    }
+    
+    .section-container {
+        padding: 15px 10px;
+    }
+    
+    #about-me {
+        padding: 25px 10px;
+    }
+    
+    #about-me h1 {
+        font-size: 1.3rem;
+        line-height: 1.2;
+    }
+    
+    .section-heading span {
+        font-size: 0.85rem;
+    }
+    
+    .section-heading h3 {
+        font-size: 1.1rem;
+    }
 }
